@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "This is my react project",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
@@ -17,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/FaisalAI541/my-project/issues"
   },
-  "homepage": "https://github.com/FaisalAI541/my-project#readme",
+  "homepage": "https://github.com/FaisalAI541/GetYourFood",
   "devDependencies": {
     "parcel": "^2.11.0",
     "postcss": "^8.4.38",
@@ -27,12 +29,16 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
     "framer-motion": "^5.6.0",
-    "react": "^18.2.0",
+    "gh-pages": "^6.1.1",
+    "install": "^0.13.0",
+    "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.2.1",
-    "react-redux": "^7.2.4",
+    "react-icons": "^4.3.1",
+    "react-redux": "^8.0.5",
     "react-reveal": "^1.2.2",
-    "react-router-dom": "^6.22.2"
+    "react-router": "^6.0.2",
+    "react-router-dom": "^6.0.2",
+    "react-use-measure": "^2.1.1"
   },
   "browserslist": [
     "last 2 versions"
