@@ -1,5 +1,5 @@
 import React from "react";
-import { Fade, Zoom } from "react-reveal";
+import { Fade , Zoom} from "react-awesome-reveal";
 import { FaRocket, FaRegLightbulb, FaHeart } from "react-icons/fa";
 
 const AboutUs = () => {
