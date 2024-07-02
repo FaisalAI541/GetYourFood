@@ -30,25 +30,25 @@ const Header = () => {
       </div>
       <div className="hidden md:flex items-center space-x-6">
         <div className="flex items-center">
-          <span className="mr-2">Online Status: {onlineStatus ? "✅" : "🔴"}</span>
+          <span className="mr-2 text-gray-100 hover:text-gray-300">Online Status: {onlineStatus ? "✅" : "🔴"}</span>
         </div>
         <ul className="flex text-white space-x-6">
-          <li>
+          <li className="flex items-center">
             <Link to="/" className="hover:text-gray-300" onClick={handleMenuClick}>
               Home
             </Link>
           </li>
-          <li>
+          <li className="flex items-center">
             <Link to="/about" className="hover:text-gray-300" onClick={handleMenuClick}>
               About Us
             </Link>
           </li>
-          <li>
+          <li className="flex items-center">
             <Link to="/contact" className="hover:text-gray-300" onClick={handleMenuClick}>
               Contact
             </Link>
           </li>
-          <li>
+          <li className="flex items-center">
             <Link to="/cart" className="hover:text-gray-300" onClick={handleMenuClick}>
               Cart🛒({cartItems.length})
             </Link>
@@ -87,24 +87,42 @@ const Header = () => {
       {menuOpen && (
         <div className="absolute top-full left-0 right-0 bg-gray-800 text-white flex flex-col items-center md:hidden z-20">
           <ul className="flex flex-col space-y-4 py-4">
-            <li>Online Status: {onlineStatus ? "✅" : "🔴"}</li>
-            <li>
-              <Link to="/" className="hover:text-gray-300 block py-2 px-4" onClick={handleMenuClick}>
+            <li className="flex items-center">
+              Online Status: {onlineStatus ? "✅" : "🔴"}
+            </li>
+            <li className="flex items-center">
+              <Link
+                to="/"
+                className="hover:text-gray-300 block py-2 px-4"
+                onClick={handleMenuClick}
+              >
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="/about" className="hover:text-gray-300 block py-2 px-4" onClick={handleMenuClick}>
+            <li className="flex items-center">
+              <Link
+                to="/about"
+                className="hover:text-gray-300 block py-2 px-4"
+                onClick={handleMenuClick}
+              >
                 About Us
               </Link>
             </li>
-            <li>
-              <Link to="/contact" className="hover:text-gray-300 block py-2 px-4" onClick={handleMenuClick}>
+            <li className="flex items-center">
+              <Link
+                to="/contact"
+                className="hover:text-gray-300 block py-2 px-4"
+                onClick={handleMenuClick}
+              >
                 Contact
               </Link>
             </li>
-            <li>
-              <Link to="/cart" className="hover:text-gray-300 block py-2 px-4" onClick={handleMenuClick}>
+            <li className="flex items-center">
+              <Link
+                to="/cart"
+                className="hover:text-gray-300 block py-2 px-4"
+                onClick={handleMenuClick}
+              >
                 Cart🛒({cartItems.length})
               </Link>
             </li>

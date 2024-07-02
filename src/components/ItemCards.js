@@ -3,15 +3,16 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice";
 
 const ItemCards = (props) => {
-  const items = props.item;
+  const items = props.items; // Assuming props.items is an array of items to display
   const CDN_URL =
     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
   const placeholderImage = "https://via.placeholder.com/120x95?text=No+Image";
 
   const dispatch = useDispatch();
+
   const handleAddItem = (item) => {
     console.log("Item added:", item); // Log the item being added
-    dispatch(addItem(item));
+    dispatch(addItem(item)); // Dispatch addItem action with the item
   };
 
   return (
@@ -57,6 +58,7 @@ const ItemCards = (props) => {
                 <button
                   className="bg-white shadow-lg rounded-lg px-4 py-2 text-green-600 font-bold transition-transform duration-300 hover:scale-105"
                   onClick={() => handleAddItem(item)}
+                  aria-label={`Add ${item?.card?.info?.name} to cart`}
                 >
                   Add +
                 </button>
